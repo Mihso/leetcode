@@ -9,7 +9,7 @@ class Solution(object):
             if num[-1] in {'1','3','5','7','9'}:
                 return num
             else:
-                num = num[0:len(num)-1]
+                num = num[:-1]
         
         return ""    
         
