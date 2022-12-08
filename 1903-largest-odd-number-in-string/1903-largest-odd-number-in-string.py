@@ -6,7 +6,7 @@ class Solution(object):
         """
 
         while len(num) > 0:
-            if int(num[-1]) % 2 != 0:
+            if num[-1] in {'1','3','5','7','9'}:
                 return num
             else:
                 num = num[0:len(num)-1]
