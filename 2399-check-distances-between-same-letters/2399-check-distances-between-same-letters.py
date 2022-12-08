@@ -6,7 +6,6 @@ class Solution(object):
         :rtype: bool
         """
         diction = {}
-        found = {}
         for unit in range(26):
             letter = chr(unit + 97)
             if letter not in diction:
@@ -14,11 +13,7 @@ class Solution(object):
         for d in diction:
             if d in s:
                 first = s.index(d)
-                if d not in found:
-                    last = first + 1 + diction[d]
-                    if last >= len(s):
-                        return False
-                    elif s[last] != d:
-                        return False
-                    found[d] = 1
+                last = s.rindex(d)
+                if (last-first - 1) != diction[d]:
+                    return False
         return True
