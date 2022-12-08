@@ -8,11 +8,11 @@ class Solution(object):
         
         result = []
         
-        charArr = {}
+        charArr = []
         
         for unit in range(len(s)):
             if s[unit] == c:
-                charArr[unit] = 1
+                charArr.append(unit)
         print charArr
         
         for unit in range(len(s)):
