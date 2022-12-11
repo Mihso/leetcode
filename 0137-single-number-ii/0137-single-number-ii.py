@@ -4,14 +4,5 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        diction = {}
-        
-        for n in nums:
-            if n not in diction:
-                diction[n] = 1
-            else:
-                diction[n] += 1
-        for d in diction:
-            if diction[d] == 1:
-                return d
+        return (sum(set(nums))*3-sum(nums))//2
         
