@@ -11,7 +11,6 @@ class Solution(object):
         result = 0
         while index < len(nums):
             copy = nums[index: index + 2]
-            print copy
             result += min(copy)
             index += 2
         return result
