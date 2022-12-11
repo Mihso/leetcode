@@ -10,11 +10,16 @@ class Solution(object):
         :rtype: bool
         """
         noder = head
-        count = []
+        copy = None
         while noder:
-            count.append(noder.val)
+            copy = ListNode(noder.val,copy)
             noder = noder.next
-            
-        check = list(count)
-        check.reverse()
-        return (count == check)
+        noder = head
+        
+        while noder:
+            if copy.val != noder.val:
+                return False
+            else:
+                noder = noder.next
+                copy = copy.next
+        return True
