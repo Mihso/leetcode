@@ -11,5 +11,4 @@ class Solution(object):
             for n in range(0, len(nums)-start - 1):
                 if nums[n] > nums[n + 1]:
                     nums[n],nums[n+1] = nums[n+1], nums[n]
-            print(nums)
             start += 1
