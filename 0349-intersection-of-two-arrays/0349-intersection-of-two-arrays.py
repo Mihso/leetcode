@@ -6,13 +6,9 @@ class Solution(object):
         :rtype: List[int]
         """
         result = []
-        
-        if len(nums1) < len(nums2):
-            for n in nums1:
-                if n in nums2 and n not in result:
-                    result.append(n)
-        else:
-            for n in nums1:
-                if n in nums2 and n not in result:
-                    result.append(n)
+        set1 = set(nums1)
+        set2 = set(nums2)
+        for n in set1:
+            if n in set2:
+                result.append(n)
         return result
