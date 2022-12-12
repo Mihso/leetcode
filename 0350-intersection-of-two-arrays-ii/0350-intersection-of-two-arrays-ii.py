@@ -18,8 +18,6 @@ class Solution(object):
                 set2[n] = 1
             else:
                 set2[n] += 1
-        print set1
-        print set2
         for n in set1:
             if n in set2:
                 for unit in range(min(set1[n],set2[n])):
