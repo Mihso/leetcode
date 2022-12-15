@@ -29,7 +29,6 @@ class Solution(object):
                         placed = True
             if placed == False:
                 return False
-            print(flowerbed)
         return True
                 
         
