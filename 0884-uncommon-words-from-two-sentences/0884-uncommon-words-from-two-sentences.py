@@ -7,7 +7,6 @@ class Solution(object):
         """
         list1 = s1.split(" ")
         list2 = s2.split(" ")
-        print(list1, list2)
         set1 = {}
         set2 = {}
         result = []
