@@ -13,7 +13,6 @@ class Solution(object):
                     sub = title[start: t+ 1]
                 else:
                     sub = title[start: t]
-                print(title[start: t])
                 if len(sub) >= 3:
                     title[start] = title[start].upper()
                 start = t + 1
