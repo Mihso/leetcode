@@ -4,7 +4,6 @@ class Solution(object):
         :type grid: List[List[int]]
         :rtype: int
         """
-        check = {}
         result = 0
         def checker(x,y):
             count = 1
