@@ -20,7 +20,6 @@ class Solution(object):
                     del record[-1]
             else:
                 record.append(int(o))
-            print(record)
         if len(record) > 0:
             return sum(record)
         return 0
