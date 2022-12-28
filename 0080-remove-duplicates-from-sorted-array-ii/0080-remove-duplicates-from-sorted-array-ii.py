@@ -13,13 +13,9 @@ class Solution(object):
                 count = 1
                 nums[index] = n
                 index += 1
-                print(n,"changer")
             elif count < 2:
                 nums[index] = n
                 index += 1
-                count += 1
-                print(n,"counter")
-
-        print(nums, index)       
+                count += 1     
         return index
             
