@@ -18,17 +18,13 @@ class Solution(object):
             curr = board[x][y]
             board[x][y] = "#"
             if index < len(word)-1:
-                if x > 0:
-                    if board[x - 1][y] == word[index + 1]:
-                        c1 = searcher(x-1, y, index + 1)
-                if x < len(board)-1:
-                    if board[x+1][y] == word[index + 1]:
+                if x > 0 and board[x - 1][y] == word[index + 1]:
+                    c1 = searcher(x-1, y, index + 1)
+                if x < len(board)-1 and board[x+1][y] == word[index + 1]:
                         c2 = searcher(x+1,y,index + 1)
-                if y > 0:
-                    if board[x][y-1] == word[index + 1]:
+                if y > 0 and board[x][y-1] == word[index + 1]:
                         c3 = searcher(x, y-1, index + 1)
-                if y < len(board[x])-1:
-                    if board[x][y+1] == word[index + 1]:
+                if y < len(board[x])-1 and board[x][y+1] == word[index + 1]:
                         c4 = searcher(x,y+1,index + 1)
             board[x][y] = curr
             return(c1 or c2 or c3 or c4)
