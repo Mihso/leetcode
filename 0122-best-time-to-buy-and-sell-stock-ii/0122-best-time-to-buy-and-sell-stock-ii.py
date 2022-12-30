@@ -12,6 +12,5 @@ class Solution(object):
                 start = n
             elif n == len(prices)-1:
                 result += prices[n] - prices[start]
-            print(result)
         return result
                 
