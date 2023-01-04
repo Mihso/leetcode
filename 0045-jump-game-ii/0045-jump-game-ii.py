@@ -13,6 +13,8 @@ class Solution(object):
                 for i in range(1, nums[index] + 1):
                     step = min(step, leap(index + i))
                 diction[index] = 1 + step
-            return diction[index]
+                return 1 + step
+            else:
+                return diction[index]
         return leap(0)
                 
