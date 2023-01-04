@@ -25,5 +25,4 @@ class Solution(object):
                     for col in range(down, up -1, -1):
                         result.append(matrix[col][left])
                     left += 1
-            print result
         return result
