@@ -9,7 +9,7 @@ class Solution(object):
             if index not in diction:
                 if index >= len(nums) -1:
                     return 0
-                step = float('inf')
+                step = len(nums)
                 for i in range(1, nums[index] + 1):
                     step = min(step, leap(index + i))
                 diction[index] = 1 + step
