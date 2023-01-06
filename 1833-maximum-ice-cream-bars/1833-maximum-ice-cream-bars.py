@@ -7,8 +7,6 @@ class Solution(object):
         """
         
         costs.sort()
-        if costs[0] > coins:
-            return 0
         total = 0
         count = 0
         index = 0
@@ -17,6 +15,5 @@ class Solution(object):
             if total <= coins:
                 count += 1
             index +=1
-            print total
             
         return count
