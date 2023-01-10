@@ -27,7 +27,6 @@ class Solution(object):
         stringRoot = convert(root)
         stringSub = convert(subRoot)
         
-        print(stringRoot,stringSub)
         if stringSub in stringRoot:
             return True
         return False
