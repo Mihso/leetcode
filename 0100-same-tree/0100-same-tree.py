@@ -15,9 +15,6 @@ class Solution(object):
         def looper(noderp, noderq):
             lefter = True
             righter = True
-            print(noderp.val)
-            print(noderq.val)
-            print(".......")
             if noderp.val != noderq.val:
                 return False
             else:
