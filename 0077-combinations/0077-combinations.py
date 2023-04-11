@@ -9,17 +9,14 @@ class Solution(object):
         def checker(lister, output):
             prime = list(lister)
             while len(prime) > 0:
-                copy = list(prime)
                 copyOut = list(output)
                 copyOut.append(prime[0])
-                copy.remove(prime[0])
                 prime.remove(prime[0])
 
-                
                 if len(copyOut) >= k:
                     result.append(copyOut)
                 else:
-                    checker(copy, copyOut)
+                    checker(prime, copyOut)
         options = []
         
         for unit in range(1,n+1):
