@@ -13,11 +13,10 @@ class Solution(object):
                 return 1
             if left > right:
                 return 0
-            if left < right:
-                if s[left] == s[right]:
-                    diction[(left,right)] = 2 + palin(left + 1, right - 1)
-                else:
-                    diction[(left,right)] = max(palin(left + 1, right), palin(left, right - 1))
+            if s[left] == s[right]:
+                diction[(left,right)] = 2 + palin(left + 1, right - 1)
+            else:
+                diction[(left,right)] = max(palin(left + 1, right), palin(left, right - 1))
             return diction[(left,right)]
             
         
