@@ -6,7 +6,6 @@ class Solution(object):
         """
         diction = {}
         def palin(left, right):
-            answer = 0
             if (left,right) in diction:
                 return diction[(left,right)]
             if left == right:
@@ -20,6 +19,4 @@ class Solution(object):
             return diction[(left,right)]
             
         
-        result = palin(0,len(s)-1)
-        
-        return result
+        return palin(0,len(s)-1)
