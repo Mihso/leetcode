@@ -5,16 +5,14 @@ class Solution(object):
         :type word2: str
         :rtype: str
         """
-        index1 = 0
-        index2 = 0
+        index = 0
         result = ""
-        while index1 < len(word1) and index2 < len(word2):
-            result += word1[index1]
-            index1 += 1
-            result += word2[index2]
-            index2 += 1
-        if index1 < len(word1):
-            result += word1[index1:len(word1)]
-        elif index2 < len(word2):
-            result += word2[index2:len(word2)]
+        while index < len(word1) and index < len(word2):
+            result += word1[index]
+            result += word2[index]
+            index += 1
+        if index < len(word1):
+            result += word1[index:len(word1)]
+        elif index < len(word2):
+            result += word2[index:len(word2)]
         return result
