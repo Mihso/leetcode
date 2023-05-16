@@ -17,7 +17,6 @@ class Solution(object):
             if not node.left and not node.right:
                 if targetSum == current:
                     self.result = True
-                    print("found")
             else:
                 if node.left:
                     search(node.left, current)
