@@ -6,7 +6,6 @@ class Solution(object):
         :rtype: str
         """
         target = ord(target)
-        print(target)
         
         for l in letters:
             if ord(l)> target:
