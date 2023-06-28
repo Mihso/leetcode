@@ -20,7 +20,6 @@ class Solution(object):
         while noder:
             s2 += str(noder.val)
             noder=noder.next
-        print((s1,s2))
         newValue = int(s1) + int(s2)
         final = list(str(newValue))
         
