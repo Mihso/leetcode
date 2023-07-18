@@ -6,6 +6,8 @@ class Solution(object):
         :rtype: bool
         """
         for r in range(len(matrix)):
+            if matrix[r][0] > target:
+                return False
             for c in range(len(matrix[r])):
                 if matrix[r][c] == target:
                     return True
