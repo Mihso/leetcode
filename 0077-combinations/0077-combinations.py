@@ -5,21 +5,14 @@ class Solution(object):
         :type k: int
         :rtype: List[List[int]]
         """
-        result = []
-        def checker(lister, output):
-            prime = list(lister)
-            while len(prime) > 0:
-                copyOut = list(output)
-                copyOut.append(prime[0])
-                prime.remove(prime[0])
-
-                if len(copyOut) >= k:
-                    result.append(copyOut)
-                else:
-                    checker(prime, copyOut)
-        options = []
-        
-        for unit in range(1,n+1):
-            options.append(unit)
-        checker(options, [])
-        return result
+        output = []
+        def adder(lister, start):
+            if len(lister) == k:
+                output.append(list(lister))
+            else:
+                for q in range(start, n+1):
+                    lister.append(q)
+                    adder(lister, q+1)
+                    lister.pop()
+        adder([],1)
+        return output
