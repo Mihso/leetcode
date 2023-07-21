@@ -24,7 +24,6 @@ class Solution(object):
             slope2 = float(90)
         else:
             slope2 = float(diff2X) / float(diff2Y)
-        print(slope, slope2)
         if slope2 != slope:
             return True
         return False
