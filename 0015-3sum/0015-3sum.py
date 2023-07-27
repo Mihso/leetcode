@@ -12,10 +12,10 @@ class Solution(object):
             left = n+1
             right = len(nums) - 1
             while left < right:
-                summer = nums[left] + nums[right]
-                if nums[n] + summer < 0:
+                summer = nums[n] + nums[left] + nums[right]
+                if summer < 0:
                     left +=1
-                elif nums[n] + summer > 0:
+                elif summer > 0:
                     right -=1
                 else:
                     if (nums[n],nums[left],nums[right]) not in done:
