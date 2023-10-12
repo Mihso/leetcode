@@ -9,7 +9,6 @@ class Solution {
         for(int i = 0; i < s.length(); i++){
             String current = "";
             current += s.charAt(i);
-            System.out.println(current);
             if(current.equals(")"))
             {
                 if(stacker.isEmpty()){
