@@ -9,19 +9,15 @@ class Solution {
     
     
     public void generator(String s ,int counter1, int counter2, int n){
-        if(s.length() >= n*2 && counter1 == counter2){
+        if( counter1 == n && counter2 == n){
              finall.add(s);
         }
         else if(counter1 < counter2 || counter1 > n || counter2 > n){
            ;
         }
         else{
-        String one = s + "(";
-            
-        String two = s + ")";
-        
-        generator(one, counter1 + 1, counter2, n);
-        generator(two, counter1,counter2 + 1, n);
+        generator(s + "(" , counter1 + 1, counter2, n);
+        generator(s + ")", counter1,counter2 + 1, n);
         }
         
     } 
