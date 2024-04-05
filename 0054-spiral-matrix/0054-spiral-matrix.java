@@ -1,9 +1,6 @@
 class Solution {
     public List<Integer> spiralOrder(int[][] matrix) {
-        int x = 0;
-        int y = 0;
-        int maxX = matrix[0].length-1;
-        int maxY = matrix.length-1;
+        int x = 0, y = 0, maxX = matrix[0].length-1, maxY = matrix.length-1;
         
         List<Integer> answer = new ArrayList<>();
         
