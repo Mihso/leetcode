@@ -20,7 +20,6 @@ class Solution {
                     i++;
                 }
             }
-        System.out.println(s);
         }
         
         return s;
