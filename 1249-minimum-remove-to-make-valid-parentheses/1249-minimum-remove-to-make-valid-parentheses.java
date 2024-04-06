@@ -17,7 +17,7 @@ class Solution {
         }
         
         int i = letters.length - 1;
-        while(counter > 0 && i >= 0){
+        while(counter > 0){
             if(letters[i].equals("(")){
                 letters[i] = "";
                 counter -= 1;
