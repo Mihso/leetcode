@@ -21,9 +21,6 @@ class Solution {
             counter += 1;
             }
             
-                
-            int store = tickets[0];
-            
             copy.remove(0);
             copy.add(val);
                 
