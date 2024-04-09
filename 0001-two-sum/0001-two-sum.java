@@ -1,13 +1,33 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        for(int i = 0; i < nums.length-1; i++){
-            for(int j = i + 1; j < nums.length; j++)
-            {
-                if(nums[i] + nums[j] == target){
-                    return new int[]{i,j};
+        int left = 0;
+        int right = nums.length-1;
+        int[] answer = {left,right}; 
+        
+
+        
+        while(left < right){
+            if(nums[left] + nums[right] == target){
+                answer[0] = left;
+                answer[1] = right;
+                return answer;
+            }
+            for(int i = left + 1; i <= right - 1; i++){
+                if(nums[left] + nums[i] == target){
+                    answer[1] = i;
+                    answer[0] = left;
+                    return answer;
+                }
+                else if(nums[right] + nums[i] == target){
+                    answer[0] = i;
+                    answer[1] = right;
+                    return answer;
                 }
             }
+                            
+                left += 1;
+                right -= 1;
         }
-        return null;
+        return answer;
     }
 }
