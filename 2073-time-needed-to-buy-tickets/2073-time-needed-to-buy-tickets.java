@@ -1,6 +1,5 @@
 class Solution {
     public int timeRequiredToBuy(int[] tickets, int k) {
-        int value = tickets[k];
         int tracker = k;
         int counter = 0;
         
@@ -12,7 +11,7 @@ class Solution {
         
         if(tickets.length > 1){
         
-        while(value > 0){
+        while(copy.get(tracker) > 0){
             int val = copy.get(0);
             if(val > 0){
                 val -= 1;
@@ -22,9 +21,6 @@ class Solution {
             counter += 1;
             }
             
-            if(tracker == 0){
-                    value -= 1;
-                }
                 
             int store = tickets[0];
             
