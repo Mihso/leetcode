@@ -19,9 +19,11 @@ class Solution {
         }
         else if(target > 0){
             for(int c: candidates){
+                if(c <= target){
                 current.add(c);
                 checker(candidates, target - c, current);
                 current.remove(current.size()-1);
+            }
             }
         }
     }
