@@ -9,12 +9,8 @@ class Solution {
     
     public void checker(int[] candidates, int target, List<Integer> current, int index){
         if(target == 0){
-            List<Integer> copy = new ArrayList<>();
-            for(int i: current){
-                copy.add(i);
-            }
-            if(!answer.contains(copy)){
-                answer.add(copy);
+            if(!answer.contains(current)){
+                answer.add(new ArrayList<>(current));
             }
         }
         else if(target > 0){
