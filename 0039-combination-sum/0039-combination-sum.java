@@ -2,6 +2,7 @@ class Solution {
     ArrayList<List<Integer>> answer = new ArrayList<>();
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<Integer> empty = new ArrayList<>();
+        Arrays.sort(candidates);
         checker(candidates, target, empty);
         return answer;
     }
