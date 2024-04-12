@@ -1,10 +1,6 @@
 class Solution {
     List<List<Integer>> answer = new ArrayList<>();
     public List<List<Integer>> permute(int[] nums) {
-        Set<Integer> options = new HashSet<>();
-        for(int i: nums){
-            options.add(i);
-        }
         process(new ArrayList<Integer>(), nums);
         return answer;
     }
