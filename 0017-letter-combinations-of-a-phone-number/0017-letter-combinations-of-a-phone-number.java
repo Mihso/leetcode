@@ -24,8 +24,9 @@ class Solution {
         }
         else{
             for(char unit: key.get(Character.getNumericValue(getter.charAt(0))-2)){      
-                String copy = current + unit;
-                combo(copy, getter.substring(1, getter.length()));
+                current = current + unit;
+                combo(current, getter.substring(1, getter.length()));
+                current = current.substring(0,current.length() - 1 );
                 }
             }
         
