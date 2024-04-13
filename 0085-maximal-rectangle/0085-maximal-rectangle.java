@@ -14,7 +14,6 @@ class Solution {
                     tracker[i] = 0;
                 }
             }
-            int maxarea = 0;
             Stack<Integer> heights = new Stack<>();
             
             for(int h: tracker){
@@ -27,16 +26,15 @@ class Solution {
                 int track = 0;
                 for(int i : tracker){
                     if(i < s){
-                        maxarea = Math.max(maxarea, track);
+                        answer = Math.max(answer, track);
                         track = 0;
                     }
                     else{
                         track += s;
                     }
                 }
-                maxarea = Math.max(maxarea, track);
+                answer = Math.max(answer, track);
             }
-            answer = Math.max(answer, maxarea);
             
         }
         
