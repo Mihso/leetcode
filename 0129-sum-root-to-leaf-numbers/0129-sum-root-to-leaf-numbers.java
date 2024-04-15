@@ -14,7 +14,6 @@
  * }
  */
 class Solution {
-    int answer = 0;
     public int sumNumbers(TreeNode root) {
         return searcher(root, 0);
     }
