@@ -21,17 +21,18 @@ class Solution {
         return answer;
     }
     public void searcher(TreeNode noder, String current){
-        String copy = current + noder.val;
+        current += noder.val;
         if(noder.left == null && noder.right == null){
-            answer += Integer.valueOf(copy);
+            answer += Integer.valueOf(current);
         }
         else{
             if(noder.left != null){
-                searcher(noder.left, copy);
+                searcher(noder.left, current);
             }
             if(noder.right != null){
-                searcher(noder.right, copy);
+                searcher(noder.right, current);
             }
         }
+        current = current.substring(0, current.length() - 1);
     }
 }
