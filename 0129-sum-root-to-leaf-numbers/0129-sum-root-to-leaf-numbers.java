@@ -16,14 +16,15 @@
 class Solution {
     int answer = 0;
     public int sumNumbers(TreeNode root) {
-        String sr = "";
-        searcher(root, sr);
-        return answer;
+        return searcher(root, 0);
     }
-    public void searcher(TreeNode noder, String current){
-        current += noder.val;
+    public int searcher(TreeNode noder, int current){
+        if(noder == null){
+            return 0;
+        }
+        current = (current * 10) + (noder.val);
         if(noder.left == null && noder.right == null){
-            answer += Integer.valueOf(current);
+            return current;
         }
         else{
             if(noder.left != null){
@@ -33,6 +34,6 @@ class Solution {
                 searcher(noder.right, current);
             }
         }
-        current = current.substring(0, current.length() - 1);
+        return searcher(noder.left, current) + searcher(noder.right, current);
     }
 }
