@@ -30,7 +30,6 @@ class Solution {
                     checker[x] += checker[x-1];
                 }
             }
-            System.out.println(Arrays.toString(checker));
         }
         return checker[checker.length - 1];
         
