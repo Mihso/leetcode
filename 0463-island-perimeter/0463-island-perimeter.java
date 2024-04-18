@@ -13,11 +13,11 @@ class Solution {
     }
     
     public int checker(int[][] grid, int x, int y){
-        List<int[]> land = new ArrayList<>();
-        land.add(new int[]{x,y});
+        Stack<int[]> land = new Stack<>();
+        land.push(new int[]{x,y});
         int summer = 0;
         while(!land.isEmpty()){
-            int[] current  = land.get(0);
+            int[] current  = land.pop();
             if(current[0] < 0 || current[0] > grid.length - 1 || current[1] < 0 || current[1] > grid[0].length - 1){
                 summer += 1;
             }
@@ -26,13 +26,12 @@ class Solution {
             }
             else if(grid[current[0]][current[1]]== 1){
                 
-                land.add(new int[]{current[0]-1,current[1]});
-                land.add(new int[]{current[0]+1,current[1]});
-                land.add(new int[]{current[0],current[1] + 1});
-                land.add(new int[]{current[0],current[1] - 1});
+                land.push(new int[]{current[0]-1,current[1]});
+                land.push(new int[]{current[0]+1,current[1]});
+                land.push(new int[]{current[0],current[1] + 1});
+                land.push(new int[]{current[0],current[1] - 1});
                 grid[current[0]][current[1]] = 2;
             }
-            land.remove(0);
         }
         return summer;
     }
