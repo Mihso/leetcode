@@ -2,7 +2,6 @@ class Solution {
     public boolean validPath(int n, int[][] edges, int source, int destination) {
         Stack<Integer> container = new Stack<>();
         container.push(source);
-        Boolean found = false;
         if(source == destination){
             return true;
         }
