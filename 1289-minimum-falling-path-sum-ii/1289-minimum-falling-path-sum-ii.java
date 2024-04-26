@@ -8,10 +8,6 @@ class Solution {
         }
         }
         
-        for(int[] i: grid){
-            System.out.println(Arrays.toString(i));
-        }
-        
         int answer = grid[0][0];
         for(int i: grid[0]){
             answer = Math.min(answer, i);
