@@ -11,16 +11,11 @@ class Solution {
             return counter;
         }
         
-        System.out.println(xor%2);
-        
         while(xor > 0 || k > 0){
             
             int xorlast = xor%2;
             int klast = k%2;
             
-            System.out.print(xorlast);
-            System.out.print(" : ");
-            System.out.println(klast);
             if(xorlast != klast){
                 counter += 1;
             }
