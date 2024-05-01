@@ -7,13 +7,13 @@ class Solution {
             if(word.charAt(i) == ch){
                 x = i;
             }
-            
-            if(x != -1){
-                for(int b = x; b >= 0; b--){
-                    answer += word.charAt(b);
-                }
-            }
             i++;
+        }
+        
+        if(x != -1){
+            for(int b = x; b >= 0; b--){
+                answer += word.charAt(b);
+            }
         }
         
         if(x == -1){
