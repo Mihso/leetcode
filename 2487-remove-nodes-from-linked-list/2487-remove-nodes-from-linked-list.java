@@ -19,7 +19,6 @@ class Solution {
             lister.push(current.val);
             current = current.next;
         }
-        System.out.println(lister.peek());
         ListNode answer = new ListNode(lister.pop());
         ListNode track = answer;
         while(!lister.isEmpty()){
