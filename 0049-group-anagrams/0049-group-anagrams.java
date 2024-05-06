@@ -25,12 +25,4 @@ class Solution {
         
     }
     
-    public String makeKey(int[] freq){
-        String answer = "";
-        for(int i: freq){
-            answer += "-" + i;
-        }
-        
-        return answer;
-    }
 }
