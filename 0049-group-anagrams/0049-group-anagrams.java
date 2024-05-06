@@ -8,7 +8,7 @@ class Solution {
             for(int i = 0; i < s.length(); i++){
                 freq[s.charAt(i)-'a']++;
             }
-            String current = makeKey(freq);
+            String current = Arrays.toString(freq);
             
             if(!mapper.containsKey(current)){
                 mapper.put(current, new ArrayList<String>());
