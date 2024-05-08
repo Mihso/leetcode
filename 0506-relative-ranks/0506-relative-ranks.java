@@ -1,8 +1,7 @@
 class Solution {
     public String[] findRelativeRanks(int[] score) {
         String[] answer = new String[score.length];
-        int i = 0;
-        while(i < answer.length){
+        for(int i = 0; i < answer.length; i ++){
             int maximum = 0;
             for(int y = 0; y < score.length; y++){
                 if(score[maximum] < score[y]){
@@ -23,7 +22,6 @@ class Solution {
             }
             
             score[maximum] = -1;
-            i++;
         }
         return answer;
     }
