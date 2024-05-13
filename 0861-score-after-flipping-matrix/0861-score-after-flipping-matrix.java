@@ -13,7 +13,7 @@ class Solution {
             }
         }
         
-        for(int y = 0; y < grid[0].length; y++){
+        for(int y = 1; y < grid[0].length; y++){
             int counter = 0;
             for(int x = 0; x < grid.length; x++){
                 if(grid[x][y] == 1){
