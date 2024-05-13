@@ -38,7 +38,6 @@ class Solution {
             for(int a: i){
                 binary += a;
             }
-            System.out.println(Arrays.toString(i));
             summer += Integer.parseInt(binary, 2);
         }
         
