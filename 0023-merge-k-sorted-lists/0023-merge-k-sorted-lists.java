@@ -10,7 +10,6 @@
  */
 class Solution {
     public ListNode mergeKLists(ListNode[] lists) {
-        ListNode answer = new ListNode();
         Queue<Integer> vals = new PriorityQueue<>(Collections.reverseOrder());
         for(ListNode l: lists){
             ListNode current = l;
@@ -24,7 +23,7 @@ class Solution {
             return null;
         }
         ListNode copy = new ListNode(vals.poll());
-        answer = copy;
+        ListNode answer = copy;
         while(!vals.isEmpty()){
             answer = new ListNode(vals.poll(), copy);
             copy = answer;
