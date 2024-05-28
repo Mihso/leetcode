@@ -1,7 +1,6 @@
 class Solution {
     public int equalSubstring(String s, String t, int maxCost) {
         int totalCost = 0;
-        int lengther = s.length();
         int start = 0;
         int maxi = 0;
         
