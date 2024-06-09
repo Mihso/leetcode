@@ -40,7 +40,6 @@ class Solution {
             }
             
         }
-        System.out.println(Arrays.toString(nums));
         for(int val: positive.values()){
             answer += counter(val);
         }
