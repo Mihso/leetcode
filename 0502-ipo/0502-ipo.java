@@ -6,7 +6,6 @@ class Solution {
         for(int i = 0; i < profits.length; i++){
             pairs.add(new int[] {profits[i], capital[i]});
         }
-        Collections.sort(pairs,(int[] a, int[] b) -> b[0] - a[0]);
         
         PriorityQueue<int[]> q = new PriorityQueue<>((int[]a, int[] b) -> b[0] - a[0]);
         
