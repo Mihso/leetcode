@@ -13,7 +13,7 @@ class Solution {
         return answer;
     }
     
-    public int value(int d, int[] difficulty, int[] profit){
+    private int value(int d, int[] difficulty, int[] profit){
         int answer = 0;
         for(int i = difficulty.length - 1; i >= 0; i--){
             if(difficulty[i] <= d){
