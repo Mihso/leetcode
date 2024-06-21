@@ -1,10 +1,7 @@
 class Solution {
     public int maxSatisfied(int[] customers, int[] grumpy, int minutes) {
         int summer = 0;
-        int start = 0;
         int maxi = 0;
-        
-        List<Integer> subber = new ArrayList<>();
         
         for(int i = 0; i < customers.length; i++){
             if(grumpy[i] == 0){
