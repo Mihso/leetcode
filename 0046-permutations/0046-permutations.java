@@ -21,9 +21,8 @@ class Solution {
             answer.add(copy);
         }
         while(index < length){
-            int val = remain.get(index);
+            int val = remain.remove(index);
             current.add(val);
-            remain.remove(index);
             per(current, remain);
             current.remove(current.size() - 1);
             remain.add(index, val);
