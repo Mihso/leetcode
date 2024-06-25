@@ -1,21 +1,34 @@
 class Solution {
     List<List<Integer>> answer = new ArrayList<>();
     public List<List<Integer>> permute(int[] nums) {
-        process(new ArrayList<Integer>(), nums);
+        List<Integer> vals = new ArrayList<>();
+        
+        for(int i: nums){
+            vals.add(i);
+        }
+        
+        per(new ArrayList<Integer>(), vals);
+        
         return answer;
+        
     }
     
-    public void process(List<Integer> current, int[] options){
-        if(current.size() == options.length){
-            List<Integer> copier = new ArrayList<>(current); 
-            answer.add(copier);
+    public void per(List<Integer> current, List<Integer> remain){
+        int length = remain.size();
+        int index = 0;
+        if(length == 0){
+            List<Integer> copy = new ArrayList<>(current);
+            answer.add(copy);
         }
-        for(int i: options){
-            if(!current.contains(i)){
-            current.add(i);
-            process(current, options);
+        while(index < length){
+            int val = remain.get(index);
+            current.add(val);
+            remain.remove(index);
+            per(current, remain);
             current.remove(current.size() - 1);
-            }
+            remain.add(index, val);
+            index++;
         }
     }
+    
 }
