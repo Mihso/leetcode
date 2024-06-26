@@ -19,8 +19,6 @@ class Solution {
         
         traverse(root, order);
         
-        System.out.println(order);
-        
         return bal(order, 0, order.size() - 1);
         
     }
