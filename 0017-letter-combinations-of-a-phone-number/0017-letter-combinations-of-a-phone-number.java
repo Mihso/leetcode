@@ -1,33 +1,36 @@
 class Solution {
     List<String> answer = new ArrayList<>();
-    List<char[]> key = new ArrayList<>();
+    Map<Character,String> key = new HashMap<>();
     public List<String> letterCombinations(String digits) {
-        key.add(new char[]{'a','b','c'});
-        key.add(new char[]{'d','e','f'});
-        key.add(new char[]{'g','h','i'});
-        key.add(new char[]{'j','k','l'});
-        key.add(new char[]{'m','n','o'});
-        key.add(new char[]{'p','q','r','s'});
-        key.add(new char[]{'t','u','v'});
-        key.add(new char[]{'w','x','y','z'});
-        String stringer = "";
-        if(digits.length() == 0){
+        if(digits.length() < 1){
             return answer;
         }
-        combo(stringer, digits);
+        key.put('2', "abc");
+        key.put('3', "def");
+        key.put('4', "ghi");
+        key.put('5',"jkl");
+        key.put('6',"mno");
+        key.put('7',"pqrs");
+        key.put('8',"tuv");
+        key.put('9',"wxyz");
+        thro("", 0, digits);
         return answer;
     }
     
-    public void combo(String current, String getter){
-        if(getter.length() == 0 && current.length() > 0){
+    private void thro(String current, int index, String digits){
+        if(index >= digits.length()){
             answer.add(current);
         }
         else{
-            for(char unit: key.get(Character.getNumericValue(getter.charAt(0))-2)){      
-                String copy = current + unit;
-                combo(copy, getter.substring(1, getter.length()));
-                }
+            char curr = digits.charAt(index);
+            String s = key.get(curr);
+            for(int i = 0; i < s.length(); i++){
+                String copy = current;
+                copy+= s.charAt(i);
+                thro(copy, index+1, digits);
             }
+        }
+        
         
     }
 }
