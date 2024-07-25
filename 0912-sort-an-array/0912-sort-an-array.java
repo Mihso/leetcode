@@ -10,8 +10,6 @@ class Solution {
         int values = max - min + 1;
         int[] counter = new int[values];
         
-        Arrays.fill(counter, 0);
-        
         for(int n: nums){
             counter[n - min] += 1;
         }
