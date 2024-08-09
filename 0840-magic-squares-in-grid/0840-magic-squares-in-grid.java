@@ -54,8 +54,7 @@ class Solution {
                 return false;
             }
         }
-        int left = 0;
-        int right = 0;
+        int left = 0, right = 0;
         for(int i = 0; i < 3; i++){
             left += grid[startX+i][startY+i];
             right += grid[startX + i][startY + 2 - i];
