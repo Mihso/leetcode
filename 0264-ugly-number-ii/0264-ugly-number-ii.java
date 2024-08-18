@@ -2,8 +2,7 @@ class Solution {
     public int nthUglyNumber(int n) {
         Queue<Long> queuer = new PriorityQueue<>();
         queuer.add(1L);
-        int counter = 1;
-        while(counter < n){
+        for(int i = 1; i < n; i++){
             long value = queuer.poll();
             if(!queuer.contains(value * 2)){
                 queuer.add(value * 2);
@@ -14,7 +13,6 @@ class Solution {
             if(!queuer.contains(value * 5)){
                 queuer.add(value * 5);
             }
-            counter++;
         }
         long answer = queuer.poll();
         return (int) answer;
