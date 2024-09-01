@@ -8,11 +8,9 @@ class Solution {
         }
         for(int x  = 0; x < m; x++){
             for(int y = 0; y < n; y++){
-                if(index < original.length){
                     answer[x][y] = original[index];
                     original[index] = -1;
                     index++;
-                }
             }
         }
         
