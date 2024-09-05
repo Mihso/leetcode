@@ -23,12 +23,4 @@ class Solution {
         
     }
     
-    public boolean match(int[] lister, int target){
-        int sm = 0;
-        for(int i: lister){
-            sm += i;
-        }
-        
-        return sm == target;
-    }
 }
