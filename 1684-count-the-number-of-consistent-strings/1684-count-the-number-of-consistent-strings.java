@@ -6,6 +6,7 @@ class Solution {
             for(int i = 0; i < word.length(); i++){
                 if(!allowed.contains(word.substring(i, i + 1))){
                     valid = false;
+                    break;
                 }
             }
             if(valid){
