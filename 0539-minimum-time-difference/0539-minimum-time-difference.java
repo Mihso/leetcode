@@ -17,7 +17,6 @@ class Solution {
         int diff = Math.abs(minutes[minutes.length - 1] - minutes[0]);
         int value = Math.min( diff, 1440 - diff);
         answer = Math.min(answer, value);
-        System.out.println(Arrays.toString(minutes));
         return answer;
         
     }
