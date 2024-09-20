@@ -12,9 +12,7 @@ class Solution {
         }
         
         String suffix = s.substring(left);
-        System.out.println(suffix);
         String prefix = shortestPalindrome(s.substring(0, left));
-        System.out.println(prefix);
         for(int i = 0; i < prefix.length(); i++){
             s = prefix.charAt(i) + s;
         }
