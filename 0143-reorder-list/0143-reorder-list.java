@@ -18,16 +18,17 @@ class Solution {
         }
         current = head;
         int index = 0;
-        int counter = 0;
+        boolean counter = true;
         while(current != null){
-            if(counter % 2 == 0){
+            if(counter){
                 current.val = nodes.get(index);
+                counter = false;
             }
             else{
                 current.val = nodes.get(nodes.size() - (1 + index));
                 index++;
+                counter = true;
             }
-            counter++;
             current = current.next;
         }
         
