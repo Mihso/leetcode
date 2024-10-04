@@ -5,9 +5,7 @@ class Solution {
         for(int i: skill){
             sum += i;
         }
-        sum /= (skill.length/2);
-        System.out.println(sum);
-        
+        sum /= (skill.length/2);     
         long answer = 0;
         int left = 0;
         int right = skill.length - 1;
