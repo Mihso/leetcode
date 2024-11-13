@@ -1,25 +1,17 @@
 class Solution {
-    
-    List<String> finall = new ArrayList<String>();
-    
     public List<String> generateParenthesis(int n) {
-        generator("", 0, 0, n);
-        return finall;
+        List<String> answer = new ArrayList<>();
+        recur("(", 1, n, answer);
+        return answer;
     }
     
-    
-    public void generator(String s ,int counter1, int counter2, int n){
-        if( counter1 == n && counter2 == n){
-             finall.add(s);
+    private void recur(String s,int counter, int n, List<String> stringer){
+        if(s.length() == n*2 && counter == 0){
+            stringer.add(s);
         }
-        else if(counter1 < counter2 || counter1 > n || counter2 > n){
-           ;
+        else if(s.length() < n*2 && counter >= 0){
+            recur(s+")", counter -1, n, stringer);
+            recur(s+"(", counter +1, n, stringer);
         }
-        else{
-        generator(s + "(" , counter1 + 1, counter2, n);
-        generator(s + ")", counter1,counter2 + 1, n);
-        }
-        
-    } 
-    
+    }
 }
