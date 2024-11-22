@@ -1,25 +1,26 @@
 class Solution {
-    public int maxEqualRowsAfterFlips(int[][] matrix) {
+        public int maxEqualRowsAfterFlips(int[][] matrix) {
         // Map to store frequency of each pattern
         Map<String, Integer> patternFrequency = new HashMap<>();
 
         for (int[] currentRow : matrix) {
-            String s = "";
+            StringBuilder patternBuilder = new StringBuilder("");
 
             // Convert row to pattern relative to its first element
             for (int col = 0; col < currentRow.length; col++) {
                 // 'T' if current element matches first element, 'F' otherwise
                 if (currentRow[0] == currentRow[col]) {
-                    s += "T";
+                    patternBuilder.append("T");
                 } else {
-                    s += "F";
+                    patternBuilder.append("F");
                 }
             }
 
             // Convert pattern to string and update its frequency in map
+            String rowPattern = patternBuilder.toString();
             patternFrequency.put(
-                s,
-                patternFrequency.getOrDefault(s, 0) + 1
+                rowPattern,
+                patternFrequency.getOrDefault(rowPattern, 0) + 1
             );
         }
 
