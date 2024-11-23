@@ -6,9 +6,9 @@ class Solution {
                 matrix[y][x] = box[box.length - x - 1][y];
             }
         }
-        for(char[] c: matrix){
-            System.out.println(Arrays.toString(c));
-        }
+        // for(char[] c: matrix){
+        //     System.out.println(Arrays.toString(c));
+        // }
         for(int x = 0; x < matrix[0].length; x++){
             boolean swapped = true;
             while(swapped){
