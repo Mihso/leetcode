@@ -1,8 +1,8 @@
 class Solution {
     public int findChampion(int n, int[][] edges) {
         Map<Integer, List<Integer>> incoming = new HashMap<>();
-        Queue<Integer> queue = new LinkedList<>();
-        Set<Integer> visited = new HashSet<>();
+        // Queue<Integer> queue = new LinkedList<>();
+        // Set<Integer> visited = new HashSet<>();
         int champion = n;
         for(int i = 0; i < n; i++){
             incoming.put(i, new ArrayList<Integer>());
