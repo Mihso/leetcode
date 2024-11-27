@@ -1,7 +1,6 @@
 class Solution {
     public int[] shortestDistanceAfterQueries(int n, int[][] queries) {
         int[] answer = new int[queries.length];
-        int shortest = n;
         Map<Integer, List<Integer>> paths = new HashMap<>();
         for(int i = n - 1; i >= 0; i--){
             paths.put(i, new ArrayList<Integer>());
